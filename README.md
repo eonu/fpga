@@ -51,7 +51,7 @@ For example, FPGAs can be used to implement:
 
 FPGAs are typically integrated into development boards such as the Digilent Basys 3 which consists of a Xilinx Artix-7 FPGA chip. Development boards provide:
 
-- I/O interfaces for peripherals such as push buttons, toggle switches, LEDs, seven-segment displays, 
+- on-board I/O devices such as push buttons, toggle switches, LEDs, seven-segment displays, 
 - ports for ethernet, VGA, HDMI, USB and PMOD connections,
 - on-board block RAM, digital signal processing cores and sometimes even CPU cores.
 
