@@ -4,19 +4,35 @@
 
 These circuit designs are written in the [Verilog](https://en.wikipedia.org/wiki/Verilog) hardware description language, using the [Vivado Design Suite](https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado.html).
 
-I began this project as part of my exporation into FPGAs coming from a software engineering background with limited hardware and electrical engineering knowledge, and hope that it can be useful for other beginners. I suggest following
-along and implementing the circuit designs in the order they are mentioned, and comparing your designs with mine.
-
 ---
 
 <p>
   <sup>
     <b>Contents</b>:
+    <a href="#preamble-for-beginners">Preamble for beginners</a> ·
     <a href="#what-is-an-fpga">What is an FPGA?</a> ·
     <a href="#steps-to-create-and-implement-hardware-designs-on-an-fpga">Steps to create and implement hardware designs on an FPGA</a> ·
     <a href="#circuits">Circuits</a>
   </sup>
 </p>
+
+## Preamble for beginners
+
+I began this project as part of my exporation into FPGAs coming from a software engineering background with limited hardware and electrical engineering knowledge, and hope that it can be useful for other beginners.
+
+If you do not have a background in digital design or hardware, I suggest at least partially reading [*Digital Design and Computer Architecture*](https://pages.hmc.edu/harris/ddca/ddca2e.html) by David Harris &amp; Sarah L. Harris before getting started with FPGA development. The book provides a good foundation and is written very well, 
+is easy to follow and has a lot of follow-up exercises to test your knowledge.
+
+If you want to follow along and try implementing some of the circuits, here are some suggestions:
+
+- Implement circuit designs in the order they are mentioned in this README.
+- If you don't have a development board yet, it is still possible to start with module design and simulation.
+- If you do have a board, always try out your modules on hardware — simulations aren't always the truth!
+- Feel free to try other development boards — as long as they have similar I/O to the Basys 3, you should be fine.
+- If you are more interested in VHDL or SystemVerilog, there should be no issue in designing modules in another HDL.
+- Make sure to write a testbench or multiple for each module.
+- Compare your module designs with mine, but don't take them as gospel — I'm a learner too!
+- Feel free to create an issue to suggest new circuit designs that are suitable for beginners.
 
 ## What is an FPGA?
 
