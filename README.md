@@ -50,7 +50,7 @@ Despite some similarities, hardware design and implementation of digital circuit
 
 Digital circuits are designed at this stage through the use of a HDL such as Verilog or VHDL.
 Most computer-aided design (CAD) tools such as Vivado can produce a schematic of the 
-designed module for visual inspection.
+module for visual inspection.
 
 **Example**: Verilog module design and corresponding schematic for a single digit seven-segment display.
 
@@ -156,7 +156,7 @@ synthesis converts (or *elaborates*) a circuit schematic into an FPGA *netlist*.
 
 With the produced netlist from synthesis, implementation is the process of translating the described primitives
 into the specific programmable logic blocks (*placement*) and fabric (*routing*) physically available on the FPGA.
-CAD tools often provide a visualization of the implementation that shows pin connections on the FPGA chip.
+CAD tools often provide a visualization that shows pin connections on the FPGA chip.
 
 **Example**: Placement and routing for the seven-segment display module. Each circle is a pin on the FPGA.
 
@@ -177,6 +177,15 @@ With a produced bitstream, the development board can be connected and the FPGA
 configured by pushing the bitstream to the device.
 
 ## Circuits
+
+Below are a selection of introductory circuits that are useful for learning basic FPGA development.
+
+Each circuit has its own project folder and set of subdirectories for project files:
+- `modules/`: Verilog design for the main module and any related modules used within the circuit.
+- `simulations/`: Simulation testbenches for behavioural testing of the module.
+- `constraints/`: XDC/TCL constraint files for placement and routing.
+
+Each circuit has more information on its own linked `README.md`, giving a high level description of the module as well as its expected inputs and outputs.
 
 ### Combinational logic circuits
 
