@@ -212,3 +212,10 @@ though may be *asynchronous* in certain cases.
 - [ ] Counter - Button-powered with LED-triggered divide-by-3 state machine
 - [ ] Counter - Button-powered with LED-triggered divide-by-n state machine
 - [ ] Register file / SRAM 
+
+---
+
+<p align="center">
+  &copy; 2024-2026, Edwin Onuonga - Released under the <a href="https://opensource.org/licenses/MIT">MIT</a> license.<br/>
+  <em>Authored and maintained by Edwin Onuonga.</em>
+</p>
