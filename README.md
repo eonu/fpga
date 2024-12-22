@@ -4,6 +4,9 @@
 
 These circuit designs are written in the [Verilog](https://en.wikipedia.org/wiki/Verilog) hardware description language, using the [Vivado Design Suite](https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado.html).
 
+I began this project as part of my exporation into FPGAs coming from a software engineering background with limited hardware and electrical engineering knowledge, and hope that it can be useful for other beginners. I suggest following
+along and implementing the circuit designs in the order they are mentioned, and comparing your designs with mine.
+
 ---
 
 <p>
@@ -25,7 +28,7 @@ With this flexibility FPGAs can be programmed to implement arbitrary hardware de
 
 For example, FPGAs can be used to implement:
 
-- low-latency network interfaces for receiving, manipulating and sending network packets over different protocols,
+- low-latency network interfaces for receiving, manipulating and sending packets over different protocols,
 - video and image processors for applying transformations such as filtering and compression,
 - optimized inference pipelines for trained machine learning models,
 - and even microprocessors fully implemented in digital logic (called *soft microprocessors*).
