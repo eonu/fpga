@@ -1,8 +1,19 @@
 # FPGA Circuit Designs
 
-**A collection of hardware implementations for basic digital circuit designs applied to a [Digilent Basys 3](https://digilent.com/reference/programmable-logic/basys-3/start) development board with a [Xilinx Artix-7](https://www.amd.com/en/products/adaptive-socs-and-fpgas/fpga/artix-7.html) FPGA chip.**
+**Hardware implementations for basic digital circuit designs applied to a [Digilent Basys 3](https://digilent.com/reference/programmable-logic/basys-3/start) development board with a [Xilinx Artix-7](https://www.amd.com/en/products/adaptive-socs-and-fpgas/fpga/artix-7.html) FPGA chip.**
 
 These circuit designs are written in the [Verilog](https://en.wikipedia.org/wiki/Verilog) hardware description language, using the [Vivado Design Suite](https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado.html).
+
+---
+
+<p>
+  <sup>
+    <b>Contents</b>:
+    <a href="#what-is-an-fpga">What is an FPGA?</a> ·
+    <a href="#steps-to-create-and-implement-hardware-designs-on-an-fpga">Steps to create and implement hardware designs on an FPGA</a> ·
+    <a href="#circuits">Circuits</a>
+  </sup>
+</p>
 
 ## What is an FPGA?
 
@@ -26,7 +37,7 @@ FPGAs are typically integrated into development boards such as the Digilent Basy
 - on-board block RAM, digital signal processing cores and sometimes even CPU cores.
 
 <p align="center">
-	<img width="500px" src="assets/basys3.jpg"></br>
+	<img width="500px" src="assets/basys3.jpg"/><br/>
 	<em>Digilent Basys 3 development board with a Xilinx Artix-7 FPGA chip (in the centre).</em><br/>
 	<sup>Image courtesy of Digilent (from the <a href="https://digilent.com/reference/programmable-logic/basys-3/reference-manual">Basys 3 reference manual</a>).</sup>
 </p>
@@ -43,36 +54,25 @@ designed module for visual inspection.
 
 **Example**: Verilog module design and corresponding schematic for a single digit seven-segment display.
 
-<table>
-	<thead>
-		<tr>
-			<th>Verilog</th>
-			<th>Schematic</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-<td>
-
 ```verilog
 `timescale 1ns / 1ps
 
 module SevenSegmentDisplay(
     input wire [3:0] value,
-	// Input value (0-15)
+    // Input value (0-15)
     input wire decimal,
-	// Decimal/hexadecimal mode selector 
+    // Decimal/hexadecimal mode selector 
     input wire [1:0] digit,
-	// Digit selector (0-3)
+    // Digit selector (0-3)
     output reg [3:0] anodes,
-	// Inverted one-hot digit indicator
+    // Inverted one-hot digit indicator
     output reg [7:0] cathodes
-	// Inverted one-hot segment indicator
+    // Inverted one-hot segment indicator
 );
-	// Output bus
+    // Output bus
     wire [7:0] segments;
 
-	// Use an external module for decoding the input
+    // Use an external module for decoding the input
     SevenSegmentDecoder Decoder (.value(value), .decimal(decimal), .segments(segments));
     
     always @(*) begin
@@ -90,13 +90,9 @@ module SevenSegmentDisplay(
 endmodule
 ```
 
-</td>
-			<td>
-				<img src="assets/schematic.png"/>
-			</td>
-		</tr>
-	</tbody>
-</table>
+<p align="center">
+    <img width="500px" src="assets/schematic.png"/>
+</p>
 
 #### 2. Behavioural simulation
 
@@ -141,7 +137,7 @@ module TestSevenSegmentDisplay();
                 digit = j;
                 for (k = 0; k < 16; k = k + 1) begin
                     value = k;
-                    #5;
+                    #5; // Wait 5 nanoseconds after setting the value
                 end
             end
         end
