@@ -20,7 +20,7 @@ Synthesis and implementation should be done to connect the FPGA I/O pins for the
 <summary>
     <b>Click here to view the schematic diagram for this circuit's module implementation</b>
 </summary>
-<p align="center">
+<p>
     <br/>
     <img width="750px" src="schematic.png"/>
 </p>

@@ -10,7 +10,7 @@ This module should implement a basic switch-powered LED connection that:
     <b>Click here to view the schematic diagram for this circuit's module implementation</b>
 </summary>
 
-<p align="center">
+<p>
     <br/>
     <img width="600px" src="schematic.png"/>
 </p>

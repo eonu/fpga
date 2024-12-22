@@ -16,7 +16,7 @@ This behaviour can be captured in a simple combinational logic circuit and imple
 <summary>
     <b>Click here to view the schematic diagram for this circuit's module implementation</b>
 </summary>
-<p align="center">
+<p>
     <br/>
     <img width="750px" src="schematic.png"/>
 </p>
