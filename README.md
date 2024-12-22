@@ -42,11 +42,11 @@ FPGAs are typically integrated into development boards such as the Digilent Basy
 	<sup>Image courtesy of Digilent (from the <a href="https://digilent.com/reference/programmable-logic/basys-3/reference-manual">Basys 3 reference manual</a>).</sup>
 </p>
 
-### Steps to create and implement hardware designs on an FPGA
+## Steps to create and implement hardware designs on an FPGA
 
-Despite some similarities, hardware design and implementation of digital circuits on an FPGA has a very different process to software development.
+Despite some similarities, hardware design and implementation of digital circuits on an FPGA has a very different approach and process to software development.
 
-#### 1. Module design
+### 1. Module design
 
 Digital circuits are designed at this stage through the use of a HDL such as Verilog or VHDL.
 Most computer-aided design (CAD) tools such as Vivado can produce a schematic of the 
@@ -91,23 +91,20 @@ endmodule
 ```
 
 <p align="center">
-    <img width="500px" src="assets/schematic.png"/>
+    <img width="600px" src="assets/schematic.png"/>
 </p>
 
-#### 2. Behavioural simulation
+### 2. Behavioural simulation
 
 Before designed modules are synthesized, implemented and programmed into an FPGA,
 behavioural simulation lets us inspect a circuit design by building a *testbench* which 
 accepts test input signals and allows us to compare expected outputs
 against simulated outputs through the use of *timing diagrams*.
 
-Behavioural simulation can be seen as analogous to writing unit tests for a modular software package, but for hardware.
+Behavioural simulation is analogous to writing unit tests for a modular software package, 
+but for hardware.
 
-<details>
-<summary>
-<u><b>Example</b>: Click here to view simulation test bench and corresponding timing diagram for the seven-segment display module.</u>
-</summary>
-<p></p>
+**Example**: Simulation test bench and corresponding timing diagram for the seven-segment display module.
 
 ```verilog
 `timescale 1ns / 1ps
@@ -119,6 +116,7 @@ module TestSevenSegmentDisplay();
     wire [3:0] anodes;
     wire [7:0] cathodes;
     
+    // Indicate module as circuit-under-test (CUT)
     SevenSegmentDisplay CUT (value, decimal, digit, anodes, cathodes);
     
     integer i;
@@ -147,38 +145,33 @@ endmodule
 ```
 
 <img src="assets/simulation.png"/>
-</details>
 
-#### 3. Synthesis
+### 3. Synthesis
 
 Once tested through simulation, a circuit design can then be synthesized by mapping 
 high level HDL code into the available hardware resources of the FPGA, called *primitives*. In other words,
 synthesis converts (or *elaborates*) a circuit schematic into an FPGA *netlist*.
 
-#### 4. Implementation
+### 4. Implementation
 
 With the produced netlist from synthesis, implementation is the process of translating the described primitives
 into the specific programmable logic blocks (*placement*) and fabric (*routing*) physically available on the FPGA.
 CAD tools often provide a visualization of the implementation that shows pin connections on the FPGA chip.
 
-<details>
-	<summary>
-		<u><b>Example</b>: Click here to see the placement and routing for the seven-segment display module. Each circle represents a pin on the FPGA chip.</u>
-	</summary>
-	</br>
-	<p align="center">
-		<img width="500px" src="assets/implementation.png"/>
-	</p>
-</details>
+**Example**: Placement and routing for the seven-segment display module. Each circle is a pin on the FPGA.
 
-#### 5. Bitstream generation
+<p align="center">
+    <img width="500px" src="assets/implementation.png"/>
+</p>
+
+### 5. Bitstream generation
 
 The final step of development is to generate a *bitstream*, which is a complete description of the 
 logic and routing necessary to implement the design on hardware. Bitstreams are typically vendor-specific, 
 meaning that each tool for FPGA development (e.g. Vivado) has a unique format and proprietary set 
 of instructions for producing and representing bitstreams for hardware programming on supported FPGAs.
 
-#### 6. Hardware programming
+### 6. Hardware programming
 
 With a produced bitstream, the development board can be connected and the FPGA 
 configured by pushing the bitstream to the device.
