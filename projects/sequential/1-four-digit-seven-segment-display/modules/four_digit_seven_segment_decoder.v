@@ -78,32 +78,22 @@ module FourDigitSevenSegmentDecoder(
             s0: begin
                 value = v0;
                 idx = 2'd0;
-//                anodes = enable[2'd0] ? ~state: ~4'b0;
-//                cathodes = enable[2'd0] ? segments: ~8'b0;
             end
             s1: begin
                 value = v1;
                 idx = 2'd1;
-//                anodes = enable[2'd1] ? ~state: ~4'b0;
-//                cathodes = enable[2'd1] ? segments: ~8'b0;
             end
             s2: begin
                 value = v2;
                 idx = 2'd2;
-//                anodes = enable[2'd2] ? ~state: ~4'b0;
-//                cathodes = enable[2'd2] ? segments: ~8'b0;
             end
             s3: begin
                 value = v3;
                 idx = 2'd3;
-//                anodes = enable[2'd3] ? ~state: ~4'b0;
-//                cathodes = enable[2'd3] ? segments: ~8'b0;
             end
             default: begin
                 value = 4'b0;
                 idx = 2'd0;
-//                anodes = ~4'b0;
-//                cathodes = ~8'b0;
             end
         endcase
         anodes = digits[idx] ? ~state : ~4'b0;
