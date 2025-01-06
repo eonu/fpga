@@ -19,10 +19,10 @@ This module should implement a basic switch-powered LED connection that:
 ## Inputs
 
 - `switch_a`: 1-bit input representing the state of the first switch.
-  - Should be controlled by a single toggle switch.
+  - Should be controlled by a single slide switch.
 
 - `switch_b`: 1-bit input representing the state of the second switch.
-  - Should be controlled by a single toggle switch.
+  - Should be controlled by a single slide switch.
 
 
 ## Outputs

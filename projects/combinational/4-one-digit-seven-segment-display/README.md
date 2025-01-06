@@ -1,6 +1,6 @@
-# LED - One-digit seven-segment display 
+# One-digit seven-segment display 
 
-This module should reuse the [seven-segment display decoder module](../3-seven-segment-decoder/) implemented previously to allow for a value to be displayed on the development board by using toggle switches for input control. 
+This module should reuse the [seven-segment display decoder module](../3-seven-segment-decoder/) implemented previously to allow for a value to be displayed on the development board by using slide switches for input control. 
 
 <blockquote>
 
@@ -29,9 +29,9 @@ Synthesis and implementation should be done to connect the FPGA I/O pins for the
 ## Inputs
 
 - `value`: 4-bit input representing the value to be displayed (0-15).
-  - Should be controlled by four toggle switches.
+  - Should be controlled by four slide switches.
 - `decimal`: 1-bit input representing a decimal/hexadecimal mode selector.
-  - Should be controlled by a single toggle switch.
+  - Should be controlled by a single slide switch.
   - When driven high, the display should be in decimal mode and show:
     - digits 0-9 if `value` is between 0-9, 
     - a hyphen (`-`) if `value` is between 10-15.
@@ -39,18 +39,18 @@ Synthesis and implementation should be done to connect the FPGA I/O pins for the
     - digits 0-9 if `value` is between 0-9,
     - letters A-F if `value` is between 10-15.
 - `digit`: 2-bit input representing which of the four digits on the display to use.
-  - Should be controlled by two toggle switches.
+  - Should be controlled by two slide switches.
 
 ## Outputs
 
 - `anodes`: 4-bit one-hot encoded output representing the digit to be used.
-- `cathodes`: 7-bit output representing the segments to be illuminated.
+- `cathodes`: 8-bit output representing the segments to be illuminated.
 
 ## Comments
 
 The Digilent Basys-3 has a four-digit seven-segment display which has:
 
 - a single 4-bit common anode input to select a digit,
-- seven 1-bit cathode inputs to illuminate each of the seven segments of the selected anode.
+- eight 1-bit cathode inputs to illuminate each of the seven segments of the selected anode.
 
 Both the anode and cathode values need to be driven low in order to select a digit and illuminate a segment.

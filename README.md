@@ -9,14 +9,14 @@ These circuit designs are written in the [Verilog](https://en.wikipedia.org/wiki
 <p>
   <sup>
     <b>Contents</b>:
-    <a href="#preamble-for-beginners">Preamble for beginners</a> ·
+    <a href="#what-is-this">What is this?</a> ·
     <a href="#what-is-an-fpga">What is an FPGA?</a> ·
     <a href="#steps-to-create-and-implement-hardware-designs-on-an-fpga">Steps to create and implement hardware designs on an FPGA</a> ·
     <a href="#circuits">Circuits</a>
   </sup>
 </p>
 
-## Preamble for beginners
+## What is this?
 
 I began this project as part of my exporation into FPGAs coming from a software engineering background with limited hardware and electrical engineering knowledge, and hope that it can be useful for other beginners.
 
@@ -51,7 +51,7 @@ For example, FPGAs can be used to implement:
 
 FPGAs are typically integrated into development boards such as the Digilent Basys 3 which consists of a Xilinx Artix-7 FPGA chip. Development boards provide:
 
-- on-board I/O devices such as push buttons, toggle switches, LEDs, seven-segment displays, 
+- on-board I/O devices such as push buttons, slide switches, LEDs, seven-segment displays, 
 - ports for ethernet, VGA, HDMI, USB and PMOD connections,
 - on-board block RAM, digital signal processing cores and sometimes even CPU cores.
 
@@ -217,10 +217,7 @@ Combinational logic circuits are typically much simpler to program as timing and
 - [x] [LED - Switch-powered with AND gate](/projects/combinational/2-led-switch-and/)
 - [x] [Seven-segment display discoder](/projects/combinational/3-seven-segment-decoder/)
 - [x] [One-digit seven-segment display](/projects/combinational/4-one-digit-seven-segment-display/)
-- [ ] [Four-digit seven-segment display](/projects/combinational/5-four-digit-seven-segment-display/)
-- [ ] Full adder with seven-segment display
-- [ ] Arithmetic logic unit
-- [ ] Arithmetic logic unit with seven-segment display
+- [ ] [Arithmetic logic unit with LED display](/projects/combinations/5-arithmetic-logic-unit/)
 
 ### Sequential logic circuits
 
@@ -231,6 +228,9 @@ in the form of *flip-flips* for *synchronous* circuits (synchronized with a cloc
 Sequential logic circuits are usually synchronous for predictability and ease of design and testing, 
 though may be *asynchronous* in certain cases.
 
+- [x] [Four-digit seven-segment display](/projects/combinational/1-four-digit-seven-segment-display/)
+- [ ] [Full seven-segment display](/projects/combinational/2-full-seven-segment-display/)
+- [ ] Arithmetic logic unit with seven-segment display
 - [ ] LED - Button-powered (stateful)
 - [ ] Counter - Button-powered with fixed increment
 - [ ] Counter - Button-powered with fixed increment/decrement
