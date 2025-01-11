@@ -217,7 +217,7 @@ Combinational logic circuits are typically much simpler to program as timing and
 - [x] [LED - Switch-powered with AND gate](/projects/combinational/2-led-switch-and/)
 - [x] [Seven-segment display discoder](/projects/combinational/3-seven-segment-decoder/)
 - [x] [One-digit seven-segment display](/projects/combinational/4-one-digit-seven-segment-display/)
-- [ ] [Arithmetic logic unit with LED display](/projects/combinations/5-arithmetic-logic-unit/)
+- [x] [Arithmetic logic unit with LED display](/projects/combinations/5-arithmetic-logic-unit/)
 
 ### Sequential logic circuits
 
