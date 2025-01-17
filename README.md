@@ -229,7 +229,7 @@ Sequential logic circuits are usually synchronous for predictability and ease of
 though may be *asynchronous* in certain cases.
 
 - [x] [Four-digit seven-segment display](/projects/sequential/1-four-digit-seven-segment-display/)
-- [ ] [Full seven-segment display](/projects/sequential/2-full-seven-segment-display/)
+- [x] [Full seven-segment display](/projects/sequential/2-full-seven-segment-display/)
 - [ ] Arithmetic logic unit with seven-segment display
 - [ ] LED - Button-powered (stateful)
 - [ ] Counter - Button-powered with fixed increment
