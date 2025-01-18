@@ -1,6 +1,6 @@
 # Full seven-segment display
 
-This module should reuse the decoder module from the [four-digit seven-segment display](../../sequential/1-four-digit-seven-segment-display/) implemented previously to allow for an arbitrary 8-bit number represented in two's complement (ranging from -128 to -127) to be fully rendered on the on-board seven-segment display.
+This module should reuse the decoder module from the [four-digit seven-segment display](../1-four-digit-seven-segment-display/) implemented previously to allow for an arbitrary 8-bit number represented in two's complement (ranging from -128 to 127) to be fully rendered on the on-board seven-segment display.
 
 This is the final seven-segment display module implemented in this project, and will be used in subsequent projects to display numerical values.
 
