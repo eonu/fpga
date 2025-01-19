@@ -231,7 +231,8 @@ though may be *asynchronous* in certain cases.
 - [x] [Four-digit seven-segment display](/projects/sequential/1-four-digit-seven-segment-display/)
 - [x] [Full seven-segment display](/projects/sequential/2-full-seven-segment-display/)
 - [x] [Arithmetic logic unit with seven-segment display](/projects/sequential/3-arithmetic-logic-unit-display)
-- [ ] Shift register - Switch-powered
+- [x] [Shift register - Switch-powered LED display](/projects/sequential/4-shift-register-switch/)
+- [ ] [Shift register - Button-powered LED display](/projects/sequential/5-shift-register-button/)
 
 <!--
 - [ ] LED - Button-powered (stateful)
