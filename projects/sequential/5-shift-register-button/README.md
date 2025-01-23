@@ -1,4 +1,4 @@
-# Shift register - Switch-powered LED display
+# Shift register - Button-powered LED display
 
 This module should implement a 16-bit shift register with the serial input controlled by a single push button. The flip-flop outputs should be connected to the 16 LEDs on the board, and the clock signal should be divided down to a rate that makes the shifting viewable to the human eye, e.g. 2Hz or 4Hz.
 
