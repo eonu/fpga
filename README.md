@@ -56,7 +56,7 @@ FPGAs are typically integrated into development boards such as the Digilent Basy
 - on-board block RAM, digital signal processing cores and sometimes even CPU cores.
 
 <p align="center">
-	<img width="500px" src="assets/basys3.jpg"/><br/>
+	<img width="700px" src="assets/basys3.jpg"/><br/>
 	<em>Digilent Basys 3 development board with a Xilinx Artix-7 FPGA chip (in the centre).</em><br/>
 	<sup>Image courtesy of Digilent (from the <a href="https://digilent.com/reference/programmable-logic/basys-3/reference-manual">Basys 3 reference manual</a>).</sup>
 </p>
@@ -233,14 +233,11 @@ though may be *asynchronous* in certain cases.
 - [x] [Arithmetic logic unit with seven-segment display](/projects/sequential/3-arithmetic-logic-unit-display)
 - [x] [Shift register - Switch-powered LED display](/projects/sequential/4-shift-register-switch/)
 - [x] [Shift register - Button-powered LED display](/projects/sequential/5-shift-register-button/)
+- [x] [Counter - Button-powered with variable increment/decrement and seven-segment display](/projects/sequential/6-variable-button-counter)
 
 <!--
 - [ ] LED - Button-powered (stateful)
-- [ ] Counter - Button-powered with fixed increment
-- [ ] Counter - Button-powered with fixed increment/decrement
-- [ ] Counter - Button-powered with variable increment/decrement
-- [ ] LED pulser - Button-powered with clocked shift register (fixed frequency)
-- [ ] LED pulser - Button-powered with clocked shift register (variable frequency)
+
 - [ ] Counter - Button-powered with LED-triggered divide-by-3 state machine
 - [ ] Counter - Button-powered with LED-triggered divide-by-n state machine
 - [ ] Register file / SRAM 
