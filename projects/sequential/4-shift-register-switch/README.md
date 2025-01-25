@@ -24,4 +24,4 @@ as well as the clock divider rate.
 
 ## Outputs
 
-- `parallel_out`: Parallel output values for all of the flip-flips.
+- `parallel_out`: Parallel output values for all of the flip-flops.

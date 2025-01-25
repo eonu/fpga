@@ -236,8 +236,6 @@ though may be *asynchronous* in certain cases.
 - [x] [Counter - Button-powered with variable increment/decrement and seven-segment display](/projects/sequential/6-variable-button-counter)
 
 <!--
-- [ ] LED - Button-powered (stateful)
-
 - [ ] Counter - Button-powered with LED-triggered divide-by-3 state machine
 - [ ] Counter - Button-powered with LED-triggered divide-by-n state machine
 - [ ] Register file / SRAM 

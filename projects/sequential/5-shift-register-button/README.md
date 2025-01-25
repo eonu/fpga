@@ -26,4 +26,4 @@ Note that as push buttons are a form of asynchronous input, metastability must b
 
 ## Outputs
 
-- `parallel_out`: Parallel output values for all of the flip-flips.
+- `parallel_out`: Parallel output values for all of the flip-flops.
