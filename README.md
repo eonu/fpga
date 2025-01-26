@@ -234,6 +234,8 @@ though may be *asynchronous* in certain cases.
 - [x] [Shift register - Switch-powered LED display](/projects/sequential/4-shift-register-switch/)
 - [x] [Shift register - Button-powered LED display](/projects/sequential/5-shift-register-button/)
 - [x] [Counter - Button-powered with variable increment/decrement and seven-segment display](/projects/sequential/6-variable-button-counter)
+- [x] [Divide-by-3 counter - Button-powered with seven-segment display](/projects/sequential/7-divide-by-3-counter)
+- [ ] [Register file / RAM]()
 
 <!--
 - [ ] Counter - Button-powered with LED-triggered divide-by-3 state machine
